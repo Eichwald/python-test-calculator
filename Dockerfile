@@ -1,6 +1,6 @@
 FROM python:3.6-slim
 
-MAINTAINER varunkumar032@gmail.com
+MAINTAINER jonas.eichwald@velux.com
 
 COPY . /python-test-calculator
 
