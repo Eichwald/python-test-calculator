@@ -12,7 +12,7 @@ def test_multiply():
     assert result == 12
     res = client.send_post(
         'add_result_for_case/20/2374',
-        {'status_id': 4, 'comment': 'This test did not work fine!'}
+        {'status_id': 1, 'comment': 'This test did not work fine!'}
     )
 
     print(res)

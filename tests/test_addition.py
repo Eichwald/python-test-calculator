@@ -12,7 +12,7 @@ def test_add():
     assert result == 7
     res = client.send_post(
         'add_result_for_case/20/2373',
-        {'status_id': 1, 'comment': 'This test worked fine!'}
+        {'status_id': 2, 'comment': 'This test worked fine!'}
     )
 
     print(res)
