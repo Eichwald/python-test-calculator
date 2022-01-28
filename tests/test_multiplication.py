@@ -11,8 +11,8 @@ def test_multiply():
     result = multiply(3, 4)
     assert result == 12
     res = client.send_post(
-        'add_result_for_case/20/2373',
-        {'status_id': 2, 'comment': 'This test did not work fine!'}
+        'add_result_for_case/20/2374',
+        {'status_id': 4, 'comment': 'This test did not work fine!'}
     )
 
     print(res)
