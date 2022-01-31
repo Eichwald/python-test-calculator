@@ -14,3 +14,13 @@ RUN add-apt-repository \
    
 RUN apt-get update  -qq \
     && apt-get install docker-ce -y
+
+# Install Selenium
+RUN mkdir -p /opt/selenium
+RUN wget --no-verbose -O /opt/selenium/selenium-server-standalone-2.53.1.jar http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar
+RUN chmod +x /opt/selenium/selenium-server-standalone-2.53.1.jar
+
+# Install Chrome WebDriver
+RUN wget --no-verbose -O /tmp/chromedriver_linux64.zip http://chromedriver.storage.googleapis.com/2.28/chromedriver_linux64.zip RUN mkdir -p /opt/chromedriver-2.28 RUN unzip /tmp/chromedriver_linux64.zip -d /opt/chromedriver-2.28 RUN chmod +x /opt/chromedriver-2.28/chromedriver
+RUN rm /tmp/chromedriver_linux64.zip
+RUN ln -fs /opt/chromedriver-2.28/chromedriver/opt/selenium/chromedriver

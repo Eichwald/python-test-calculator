@@ -10,13 +10,13 @@ client.user = 'jonas.eichwald@velux.com'
 client.password = '6/FeVpnvRjU3TjdRFnkT'
 
 chrome_options = Options()
-chrome_options.binary_location = r"C:\Users\45232\Desktop\Codeing\python-test-calculator\src/chromedriver.exe"
 chrome_options.add_argument('--start-maximized')
 chrome_options.add_argument('--headless')
 
 
 def test_sele():
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome(options=chrome_options)
+
     driver.get("http://www.python.org")
     assert "Python" in driver.title
 
