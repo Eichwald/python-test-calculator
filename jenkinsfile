@@ -10,13 +10,13 @@ pipeline {
     }
     stage('Unit Test') {
       steps {
-        bat '.\\\\Scripts\\\\UnitTest.bat'
+        bat 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Vipe_system_test\\Scripts\\UnitTest.bat'
         junit '*.xml'
       }
     }
     stage('VI BUILD') {
       steps { 
-        bat '.\\\\Scripts\\\\Build.bat'
+        bat 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Vipe_system_test\\Scripts\\Build.bat'
       }
     }
   }
