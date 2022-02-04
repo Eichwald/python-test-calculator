@@ -8,13 +8,6 @@ pipeline {
         """
       }
     }
-    stage("pytest run") {
-      steps {
-        bat """
-          docker run --rm pytest-project 
-        """
-      }
-    }
     stage('Unit Test') {
       steps {
         bat '.\\\\Scripts\\\\UnitTest.bat'
