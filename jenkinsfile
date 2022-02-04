@@ -8,15 +8,22 @@ pipeline {
         """
       }
     }
+    stage("pytest") {
+      steps {
+        sh """
+          docker run -rm pytest-project 
+        """
+      }
+    }
     stage('Unit Test') {
       steps {
-        bat '.\\\\Scripts\\\\UnitTest.bat'
+        sh '.\\\\Scripts\\\\UnitTest.bat'
         junit '*.xml'
       }
     }
     stage('VI BUILD') {
       steps { 
-        bat '.\\\\Scripts\\\\Build.bat'
+        sh '.\\\\Scripts\\\\Build.bat'
       }
     }
   }
