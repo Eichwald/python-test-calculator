@@ -15,5 +15,16 @@ pipeline {
         """
       }
     }
+    stage('Unit Test') {
+      steps {
+        bat '.\\\\Scripts\\\\UnitTest.bat'
+        junit '*.xml'
+      }
+    }
+    stage('VI BUILD') {
+      steps { 
+        bat '.\\\\Scripts\\\\Build.bat'
+      }
+    }
   }
 }
