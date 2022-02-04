@@ -3,27 +3,27 @@ pipeline {
   stages {
     stage("pytest build") {
       steps {
-        sh """
+        bat """
           docker build -t pytest-project .
         """
       }
     }
     stage("pytest run") {
       steps {
-        sh """
+        bat """
           docker run -rm pytest-project 
         """
       }
     }
     stage('Unit Test') {
       steps {
-        sh '.\\\\Scripts\\\\UnitTest.bat'
+        bat '.\\\\Scripts\\\\UnitTest.bat'
         junit '*.xml'
       }
     }
     stage('VI BUILD') {
       steps { 
-        sh '.\\\\Scripts\\\\Build.bat'
+        bat '.\\\\Scripts\\\\Build.bat'
       }
     }
   }
