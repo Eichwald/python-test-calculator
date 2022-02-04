@@ -1,17 +1,10 @@
 pipeline {
   agent any
   stages {
-    stage("build") {
+    stage("pytest") {
       steps {
         sh """
           docker build -t pytest-project .
-        """
-      }
-    }
-    stage("run") {
-      steps {
-        sh """
-          docker run --rm pytest-project
         """
       }
     }
