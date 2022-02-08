@@ -8,8 +8,7 @@ pipeline {
     }
     stage('Unit Test') {
       steps {
-        bat "cd C:\\Program Files\\Google\\Chrome\\Application"
-        bat "chrome.exe"
+        bat "ADD_CLI.exe -- /X:5 /Y:8"
       }
     }
   }
