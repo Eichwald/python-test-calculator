@@ -13,12 +13,12 @@ client.password = '6/FeVpnvRjU3TjdRFnkT'
 def test_add():
     result = add(3, 4)
     assert result == 7
-    # res = client.send_post(
-    #    'add_result_for_case/20/2373',
-    #    {'status_id': 2, 'comment': 'This test worked fine!'}
-    #)
+    res = client.send_post(
+       'add_result_for_case/28/2386',
+       {'status_id': 2, 'comment': 'This test worked fine!'}
+    )
 
-    #print(res)
+    print(res)
 
 
 def test_add_string():
