@@ -3,10 +3,7 @@ pipeline {
   stages {
     stage("pytest build") {
       steps {
-        bat """
-          docker build -t pytest-project .
-        """
-        junit '**/reports/junit/*.xml'
+        bat "pytest"
       }
     }
     stage('Unit Test') {
