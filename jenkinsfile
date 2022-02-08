@@ -10,7 +10,7 @@ pipeline {
     }
     stage('Unit Test') {
       steps {
-        bat 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Vipe_system_test\\ADD_CLI.exe -- /X:7 /Y:7'
+        echo "test"
       }
     }
   }
