@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage("pytest build") {
       steps {
-        bat "pytest"
+        bat "pytest --junitxml=reports/result.xml"
       }
     }
     stage('Unit Test') {
