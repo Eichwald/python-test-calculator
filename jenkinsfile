@@ -6,6 +6,7 @@ pipeline {
         bat """
           docker build -t pytest-project .
         """
+        junit '**/reports/junit/*.xml'
       }
     }
     stage('Unit Test') {
