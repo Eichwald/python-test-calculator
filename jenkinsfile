@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage("pytest build") {
       steps {
-        bat "pip install -r requirements.txt"
+        bat "python -m pip install -r requirements.txt"
         bat "pytest --junitxml=reports/result.xml"
       }
     }
