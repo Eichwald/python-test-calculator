@@ -1,6 +1,4 @@
 import pytest
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 
 from src.calculator import add
 from src.testrail import *
