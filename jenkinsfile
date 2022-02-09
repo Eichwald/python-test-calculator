@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Unit Test') {
       steps {
-        bat "start ADD_CLI.exe -- /X:5 /Y:10"
+        bat "ADD_CLI.exe -- /X:5 /Y:10"
       }
     }
   }
