@@ -1,12 +1,6 @@
 pipeline {
   agent any
   stages {
-    stage("pytest build") {
-      steps {
-        bat "python -m pip install -r requirements.txt"
-        bat "pytest --junitxml=reports/result.xml"
-      }
-    }
     stage('Unit Test') {
       steps {
         bat "start ADD_CLI.exe -- /X:5 /Y:8"
