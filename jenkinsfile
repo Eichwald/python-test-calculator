@@ -1,9 +1,14 @@
 pipeline {
   agent any
   stages {
-    stage('Unit Test') {
+    stage('exe Test') {
       steps {
         bat "ADD_CLI.exe -- /X:5 /Y:10"
+      }
+    }
+    stage('pytest') {
+      steps {
+        bat "pytest"
       }
     }
   }
