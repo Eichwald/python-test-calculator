@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('exe Test') {
       steps {
-        bat "ADD_CLI.exe -- /X:5 /Y:10"
+        bat "start cmd /c ADD_CLI.exe -- /X:5 /Y:10"
       }
     }
     stage('pytest') {
