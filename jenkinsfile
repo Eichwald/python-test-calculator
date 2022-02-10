@@ -8,7 +8,8 @@ pipeline {
     }
     stage('pytest') {
       steps {
-        bat "pytest"
+        bat "pytest --junitxml=testreport.xml"
+        junit "testreport.xml"
       }
     }
   }
