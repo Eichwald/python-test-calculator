@@ -9,7 +9,6 @@ trigger:
 pool:
   vmImage: 'ubuntu-20.04'
 
-
 container: mcr.microsoft.com/playwright:focal
 
 steps:
@@ -22,7 +21,7 @@ steps:
 - script: python -m pip install --upgrade pip setuptools wheel
   displayName: 'Install tools'
 
-- script: pip install -r requirements.txt
+- script: python -m pip install -r requirements.txt
   displayName: 'Install requirements'
 
 - script: pytest --junitxml=junit/test-results.xml
