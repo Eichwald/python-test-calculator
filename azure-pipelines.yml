@@ -3,8 +3,6 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-
-
 trigger:
 - master
 
@@ -12,9 +10,7 @@ pool:
   vmImage: 'ubuntu-20.04'
 
 
-
 container: mcr.microsoft.com/playwright:focal
-
 
 steps:
 - task: UsePythonVersion@0
@@ -23,15 +19,11 @@ steps:
     addToPath: true
     architecture: 'x64'
 
+- script: python -m pip install --upgrade pip setuptools wheel
+  displayName: 'Install tools'
 
-- script: |
-    pip install -r requirements.txt
-    pip install pytest pytest-azurepipelines
-    pip install pytest-cov
-    pytest --junitxml=junit/test-results.xml
+- script: pip install -r requirements.txt
+  displayName: 'Install requirements'
+
+- script: pytest --junitxml=junit/test-results.xml
   displayName: 'pytest'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
