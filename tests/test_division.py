@@ -16,6 +16,7 @@ def test_divide_string():
     with pytest.raises(TypeError):
         divide("string", 2)
 
+
 def test_example_is_working(page: Page):
     page.goto("https://example.com")
     assert page.inner_text('h1') == 'Example Domain'
