@@ -28,9 +28,5 @@ steps:
   inputs:
     script: 'playwright install'
 
-- task: CmdLine@2
-  inputs:
-    script: 'playwright install-deps'
-
 - script: pytest --junitxml=junit/test-results.xml
   displayName: 'pytest'
