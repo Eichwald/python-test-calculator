@@ -24,9 +24,5 @@ steps:
 - script: python -m pip install -r requirements.txt
   displayName: 'Install requirements'
 
-- task: CmdLine@2
-  inputs:
-    script: 'playwright install-deps'
-
 - script: pytest --junitxml=junit/test-results.xml
   displayName: 'pytest'
