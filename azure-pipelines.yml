@@ -28,5 +28,9 @@ steps:
   inputs:
     script: 'playwright install'
 
+- task: CmdLine@2
+  inputs:
+    script: 'ADD_CLI.exe'
+
 - script: pytest --junitxml=junit/test-results.xml
   displayName: 'pytest'

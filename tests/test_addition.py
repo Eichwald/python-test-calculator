@@ -1,4 +1,5 @@
 import pytest
+import os
 
 from src.calculator import add
 
@@ -9,3 +10,6 @@ def test_add():
 def test_add_string():
     with pytest.raises(TypeError):
         add("string", 4)
+
+def test_exe():
+    os.startfile("ADD_CLI.exe")
