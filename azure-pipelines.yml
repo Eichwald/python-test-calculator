@@ -28,5 +28,7 @@ steps:
   inputs:
     script: 'playwright install'
 
+
+
 - script: pytest --junitxml=junit/test-results.xml
   displayName: 'pytest'
