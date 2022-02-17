@@ -1,6 +1,5 @@
 from azure.devops.connection import Connection
 from msrest.authentication import BasicAuthentication
-import pprint
 
 # Fill in with your personal access token and org URL
 personal_access_token = 'cadivdfc3n2toqckmvvlsgn4wcq4yplnlzg7xspxxklmktg42auq'
