@@ -12,4 +12,4 @@ def test_add_string():
         add("string", 4)
 
 def test_exe():
-    os.startfile("ADD_CLI.exe")
+    print(os.getcwd())
