@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="0.061" timestamp="2022-02-21T09:21:41.745722" hostname="Eichwald"><testcase classname="tests.test_addition" name="test_add" file="tests\test_addition.py" line="5" time="0.001" /></testsuite></testsuites>
