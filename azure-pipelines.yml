@@ -25,11 +25,15 @@ steps:
   displayName: 'Install requirements'
 
 - task: CmdLine@2
+  displayName: 'Install Playwright'
   inputs:
     script: 'playwright install'
 
 - script: pytest --junitxml=junit/test-results.xml
   displayName: 'pytest'
+
+- script: python azure_connection.py
+  displayName: 'Testing azure connection'
 
 - task: PublishTestResults@2
   condition: succeededOrFailed()

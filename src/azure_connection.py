@@ -45,6 +45,6 @@ for test_plans in get_test_plans("Calculator-test-project"):
 # body = [{"id":6,"results":{"outcome":3}}, {"id":7,"results":{"outcome":3}}]
 # test_client.update_test_points(body[0].get('results'), "Calculator-test-project", 16, 19, body[0].get('id'))
 # bulk_upload_test_point_result(body, "Calculator-test-project", 16, 19)
-for case in get_test_cases_for_suite("Calculator-test-project", 16, 19):
-    print(case.test_case)
-get_test_suite("Calculator-test-project", 16)
+# for case in get_test_cases_for_suite("Calculator-test-project", 16, 19):
+#     print(case.test_case)
+# get_test_suite("Calculator-test-project", 16)
